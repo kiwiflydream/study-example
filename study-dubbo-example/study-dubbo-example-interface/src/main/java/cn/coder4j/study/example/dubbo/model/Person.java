@@ -5,6 +5,7 @@
 package cn.coder4j.study.example.dubbo.model;
 
 import java.io.Serializable;
+import java.util.StringJoiner;
 
 /**
  * @author buhao
@@ -51,5 +52,13 @@ public class Person implements Serializable {
      */
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Person.class.getSimpleName() + "[", "]")
+                .add("name='" + name + "'")
+                .add("age=" + age)
+                .toString();
     }
 }

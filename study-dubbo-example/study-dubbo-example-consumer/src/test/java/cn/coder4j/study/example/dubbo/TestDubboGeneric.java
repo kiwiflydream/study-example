@@ -6,10 +6,12 @@ package cn.coder4j.study.example.dubbo;
 
 import org.apache.dubbo.config.ReferenceConfig;
 import org.apache.dubbo.rpc.service.GenericService;
+import org.assertj.core.util.Lists;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
@@ -80,5 +82,40 @@ public class TestDubboGeneric extends BaseTest {
 
         Map<String, Object> resultMap = (Map<String, Object>) result;
         assertEquals("小萍", resultMap.get("name").toString());
+    }
+
+    /**
+     * 泛型的泛化调用
+     */
+    @Test
+    public void testGenericityType() {
+
+        // 引用远程服务
+        reference = new ReferenceConfig<>();
+        // 弱类型接口名
+        reference.setInterface("cn.coder4j.study.example.dubbo.DemoService");
+        reference.setVersion("1.0.0");
+        // 声明为泛化接口
+        reference.setGeneric(true);
+
+        // 用org.apache.dubbo.rpc.service.GenericService可以替代所有接口引用
+        GenericService genericService = reference.get();
+
+        // 用Map表示POJO参数，如果返回值为POJO也将自动转成Map
+        Map<String, Object> person1 = new HashMap<>();
+        person1.put("class", "cn.coder4j.study.example.dubbo.model.Person");
+        person1.put("name", "kiwi");
+        person1.put("age", "18");
+
+        Map<String, Object> person2 = new HashMap<>();
+        person2.put("class", "cn.coder4j.study.example.dubbo.model.Person");
+        person2.put("name", "kiwi2");
+        person2.put("age", "22");
+
+        // 如果返回POJO将自动转成Map
+        Object result = genericService.$invoke("findPersionList", new String[]
+                {"java.util.List"}, new Object[]{Lists.newArrayList(person1, person2)});
+
+        assertEquals(2, ((List) result).size());
     }
 }
