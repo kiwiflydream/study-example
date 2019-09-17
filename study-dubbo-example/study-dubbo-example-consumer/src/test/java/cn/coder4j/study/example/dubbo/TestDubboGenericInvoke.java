@@ -1,7 +1,7 @@
 /*
  * *
  *  * blog.coder4j.cn
- *  * Copyright (C) 2016-${YEAR} All Rights Reserved.
+ *  * Copyright (C) 2016-2019 All Rights Reserved.
  *
  */
 package cn.coder4j.study.example.dubbo;
@@ -19,6 +19,7 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 
 /**
+ * <link>http://dubbo.apache.org/zh-cn/docs/user/demos/generic-reference.html</link>
  * @author buhao
  * @version TestDubboGenericInvoke.java, v 0.1 2019-09-16 19:08 buhao
  */
@@ -119,5 +120,29 @@ public class TestDubboGenericInvoke extends BaseTest {
                 {"java.util.List"}, new Object[]{Lists.newArrayList(person1, person2)});
 
         assertEquals(2, ((List) result).size());
+    }
+
+    /**
+     * 通过泛化调用泛化实现
+     */
+    @Test
+    public void testGenericServiceType() {
+
+        // 引用远程服务
+        reference = new ReferenceConfig<>();
+        // 弱类型接口名
+        reference.setInterface("cn.coder4j.study.example.dubbo.DemoService");
+        reference.setVersion("1.0.0");
+        // 声明为泛化接口
+        reference.setGeneric(true);
+
+        // 用org.apache.dubbo.rpc.service.GenericService可以替代所有接口引用
+        GenericService genericService = reference.get();
+
+        // 基本类型以及Date,List,Map等不需要转换，直接调用
+        String param = "world";
+        Object result = genericService.$invoke("sayHello", new String[]{"java.lang.String"}, new Object[]{param});
+
+        assertEquals("mock success", result.toString());
     }
 }
