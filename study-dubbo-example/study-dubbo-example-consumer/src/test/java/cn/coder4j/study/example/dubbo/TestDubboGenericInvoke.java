@@ -1,6 +1,8 @@
-/**
- * fshows.com
- * Copyright (C) 2013-2019 All Rights Reserved.
+/*
+ * *
+ *  * blog.coder4j.cn
+ *  * Copyright (C) 2016-${YEAR} All Rights Reserved.
+ *
  */
 package cn.coder4j.study.example.dubbo;
 
@@ -18,9 +20,9 @@ import static org.junit.Assert.assertEquals;
 
 /**
  * @author buhao
- * @version TestDubboGeneric.java, v 0.1 2019-09-16 19:08 buhao
+ * @version TestDubboGenericInvoke.java, v 0.1 2019-09-16 19:08 buhao
  */
-public class TestDubboGeneric extends BaseTest {
+public class TestDubboGenericInvoke extends BaseTest {
 
     private static ReferenceConfig<GenericService> reference;
 
