@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ /**
+  ~  * blog.coder4j.cn
+  ~  * Copyright (C) 2016-2019 All Rights Reserved.
+  ~  */
+  -->
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.coder4j.study.example</groupId>
+    <artifactId>study-rocketmq-example</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>study-rocketmq-example</name>
+    <description>Demo project for Spring Boot</description>
+
+    <modules>
+        <module>study-rocketmq-example-consumer</module>
+        <module>study-rocketmq-example-provider</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+</project>

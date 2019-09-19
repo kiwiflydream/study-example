@@ -1,3 +1,10 @@
+/*
+ * *
+ *  * blog.coder4j.cn
+ *  * Copyright (C) 2016-2019 All Rights Reserved.
+ *
+ */
+
 package cn.coder4j.study.example.dubbo.provider;
 
 import cn.coder4j.study.example.dubbo.DemoService;
@@ -16,7 +23,7 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public String sayHello(String name) {
-        logger.info("Hello " + name + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
+        logger.info("Hello " + name + ", request from provider: " + RpcContext.getContext().getRemoteAddress());
         return "Hello " + name;
     }
 
