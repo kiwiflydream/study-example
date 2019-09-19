@@ -162,3 +162,6 @@ Temporary Items
 
 .idea/*
 *.iml
+HELP.md
+mvnw*
+.mvn/*
