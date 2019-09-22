@@ -1,0 +1,42 @@
+apollo:
+  bootstrap:
+    enabled: true # 开启 apollo
+#  meta: xxx       # 指定 apollo 注册地址
+app:
+  id: sentinel-apollo  # 指定规则项目在 apollo 的app.id，要与 sentinel 控制台启动参数一致
+spring:
+  application:
+    name: study-sentinel-example  # 应用名称，不同项目要唯一，会把他做为规则 Key 的前缀
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8989  # sentinel 控制台的地址
+      datasource:
+        ds1:
+          apollo:
+            namespace-name: lifecircle.sentinel-rule  # 保存规则的 apollo 应用的 namespace， 要与 sentinel 控制台启动参数一致
+            rule-type: flow   # 指定该数据源是限流规则
+            flow-rules-key: ${spring.application.name}-${spring.cloud.sentinel.datasource.ds1.apollo.rule-type} # 指定该规则在 apollo 应用中 key 名称
+        ds2:
+          apollo:
+            namespace-name: lifecircle.sentinel-rule
+            rule-type: degrade # 指定该数据源是熔断规则
+            flow-rules-key: ${spring.application.name}-${spring.cloud.sentinel.datasource.ds2.apollo.rule-type} # 指定该规则在 apollo 应用中 key 名称
+        ds3:
+          apollo:
+            namespace-name: lifecircle.sentinel-rule
+            rule-type: param_flow # 指定该数据源是参数限流规则
+            flow-rules-key: ${spring.application.name}-${spring.cloud.sentinel.datasource.ds3.apollo.rule-type} # 指定该规则在 apollo 应用中 key 名称
+        ds4:
+          apollo:
+            namespace-name: lifecircle.sentinel-rule
+            rule-type: system  # 指定该数据源是系统限流规则
+            flow-rules-key: ${spring.application.name}-${spring.cloud.sentinel.datasource.ds4.apollo.rule-type} # 指定该规则在 apollo 应用中 key 名称
+        ds5:
+          apollo:
+            namespace-name: lifecircle.sentinel-rule
+            rule-type: authority # 指定该数据源是认证限流(黑白名单)规则
+            flow-rules-key: ${spring.application.name}-${spring.cloud.sentinel.datasource.ds5.apollo.rule-type} # 指定该规则在 apollo 应用中 key 名称
+#      servlet:
+#        block-page:
+
