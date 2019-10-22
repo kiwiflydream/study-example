@@ -19,6 +19,7 @@
         <module>study-dubbo-example</module>
         <module>study-rocketmq-example</module>
         <module>study-thread-example</module>
+        <module>study-websocket-example</module>
     </modules>
 
     <name>study-example</name>
