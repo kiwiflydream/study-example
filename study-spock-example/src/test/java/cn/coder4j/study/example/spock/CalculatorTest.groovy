@@ -9,17 +9,28 @@ package cn.coder4j.study.example.spock
 
 
 import spock.lang.Specification
+import spock.lang.Timeout
 import spock.lang.Unroll
+
+import java.util.concurrent.TimeUnit
 
 class CalculatorTest extends Specification {
 
-    def setup() {}
+    def setup() {
+        println "方法开始前初始化"
+    }
 
-    def cleanup() {}
+    def cleanup() {
+        println "方法执行完清理"
+    }
 
-    def setupSpec() {}
+    def setupSpec() {
+        println "类加载前开始前初始化"
+    }
 
-    def cleanupSpec() {}
+    def cleanupSpec() {
+        println "所以方法执行完清理"
+    }
 
     def "test add with expect"() {
         expect:
@@ -149,5 +160,12 @@ class CalculatorTest extends Specification {
         1.0                      | 0                        | Double.POSITIVE_INFINITY
         Double.POSITIVE_INFINITY | Double.POSITIVE_INFINITY | Double.NaN
 
+    }
+
+    @Timeout(value = 900, unit = TimeUnit.MILLISECONDS)
+    def "test timeout"() {
+        expect:
+        Thread.sleep(1000)
+        1 == 1
     }
 }
