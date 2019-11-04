@@ -24,6 +24,9 @@
     <properties>
         <java.version>1.8</java.version>
         <spock.version>1.3-groovy-2.5</spock.version>
+        <!--静态方法测试-->
+        <mockito.version>2.9.0</mockito.version>
+        <powermock.version>1.7.4</powermock.version>
     </properties>
 
     <dependencies>
@@ -58,6 +61,28 @@
             <version>2.5.7</version>
             <scope>test</scope>
         </dependency>
+
+        <!--静态方法 mock 使用-->
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4</artifactId>
+            <version>${powermock.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito2</artifactId>
+            <version>${powermock.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!--静态方法 mock 使用-->
+
     </dependencies>
 
     <build>
