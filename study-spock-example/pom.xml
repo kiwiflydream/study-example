@@ -54,14 +54,14 @@
             <version>${spock.version}</version>
             <scope>test</scope>
         </dependency>
-        <!--引入 groovy 依赖-->
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>2.5.7</version>
-            <scope>test</scope>
-        </dependency>
-
+        <!--引入 groovy 依赖，可以自己依赖，也可以直接使用 spock 的-->
+        <!--<dependency>-->
+        <!--<groupId>org.codehaus.groovy</groupId>-->
+        <!--<artifactId>groovy-all</artifactId>-->
+        <!--<type>pom</type>-->
+        <!--<version>2.5.7</version>-->
+        <!--<scope>test</scope>-->
+        <!--</dependency>-->
         <!--静态方法 mock 使用-->
         <dependency>
             <groupId>org.powermock</groupId>
