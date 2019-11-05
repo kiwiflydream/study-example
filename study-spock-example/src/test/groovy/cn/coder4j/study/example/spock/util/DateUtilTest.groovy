@@ -14,7 +14,7 @@ import spock.lang.Specification
  */
 @RunWith(PowerMockRunner.class)
 @PowerMockRunnerDelegate(Sputnik.class)
-@PrepareForTest([DateUtil])
+@PrepareForTest([DateUtil.class])
 class DateUtilTest extends Specification {
 
     def "GetNowDateStr"() {

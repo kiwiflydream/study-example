@@ -7,12 +7,13 @@
 
 package cn.coder4j.study.example.spock
 
-
 import spock.lang.Specification
 import spock.lang.Timeout
 import spock.lang.Unroll
 
 import java.util.concurrent.TimeUnit
+
+import static cn.coder4j.study.example.spock.Calculator.*
 
 class CalculatorTest extends Specification {
 
@@ -34,14 +35,14 @@ class CalculatorTest extends Specification {
 
     def "test add with expect"() {
         expect:
-        Calculator.add(1, 1) == 2
-        Calculator.add(1, 2) == 3
-        Calculator.add(1, 3) == 4
+        add(1, 1) == 2
+        add(1, 2) == 3
+        add(1, 3) == 4
     }
 
     def "test add with expect where"() {
         expect:
-        Calculator.add(num1, num2) == result
+        add(num1, num2) == result
 
         where:
         num1 | num2 | result
@@ -53,36 +54,36 @@ class CalculatorTest extends Specification {
     @Unroll
     def "test add with expect where unroll"() {
         expect:
-        Calculator.add(num1, num2) == result
+        add(num1, num2) == result
 
         where:
         num1 | num2 | result
         1    | 1    | 2
         1    | 2    | 3
-        1    | 3    | 5
+        1    | 4    | 5
     }
 
     @Unroll
     def "test add with expect where unroll by #num1 + #num2 = #result"() {
         expect:
-        Calculator.add(num1, num2) == result
+        add(num1, num2) == result
 
         where:
         num1 | num2 | result
         1    | 1    | 2
         1    | 2    | 3
-        1    | 3    | 5
+        1    | 4    | 5
     }
 
     @Unroll
     def "test add with expect where unroll arr by #num1 + #num2 = #result"() {
         expect:
-        Calculator.add(num1, num2) == result
+        add(num1, num2) == result
 
         where:
         num1 << [1, 1, 2]
         num2 << [1, 2, 3]
-        result << [1, 3, 4]
+        result << [2, 3, 5]
     }
 
     def "test add with given"() {
@@ -92,7 +93,7 @@ class CalculatorTest extends Specification {
         def result = 2
 
         expect:
-        Calculator.add(num1, num2) == result
+        add(num1, num2) == result
     }
 
     def "test add with given and"() {
@@ -101,10 +102,10 @@ class CalculatorTest extends Specification {
         def num2 = 1
 
         and:
-        def result = 1
+        def result = 2
 
         expect:
-        Calculator.add(num1, num2) == result
+        add(num1, num2) == result
     }
 
     /**
@@ -114,13 +115,13 @@ class CalculatorTest extends Specification {
     @Unroll
     def "test add by  #a + #b = #result"() {
         expect:
-        Calculator.add(a, b) == result
+        add(a, b) == result
 
         where:
         a | b | result
         1 | 1 | 2
         2 | 2 | 4
-        1 | 3 | 2
+        1 | 3 | 4
     }
 
     /**
@@ -130,7 +131,7 @@ class CalculatorTest extends Specification {
     @Unroll
     def "test int divide zero exception"() {
         when:
-        Calculator.divideInt(1, 0)
+        divideInt(1, 0)
 
         then:
         def ex = thrown(ArithmeticException)
@@ -140,7 +141,7 @@ class CalculatorTest extends Specification {
     @Unroll
     def "test int divide by #a / #b = #result"() {
         expect:
-        Calculator.divideInt(a, b) == result
+        divideInt(a, b) == result
 
         where:
         a | b | result
@@ -152,7 +153,7 @@ class CalculatorTest extends Specification {
     @Unroll
     def "test double divide by #a / #b = #result"() {
         expect:
-        Calculator.divideDouble(a, b) == result
+        divideDouble(a, b) == result
 
         where:
         a                        | b                        | result
@@ -162,7 +163,7 @@ class CalculatorTest extends Specification {
 
     }
 
-    @Timeout(value = 900, unit = TimeUnit.MILLISECONDS)
+    @Timeout(value = 1900, unit = TimeUnit.MILLISECONDS)
     def "test timeout"() {
         expect:
         Thread.sleep(1000)
