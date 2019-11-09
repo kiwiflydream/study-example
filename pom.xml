@@ -21,6 +21,8 @@
         <module>study-thread-example</module>
         <module>study-websocket-example</module>
         <module>study-spock-example</module>
+        <module>study-jvm-example</module>
+        <module>study-zookeeper-example</module>
     </modules>
 
     <name>study-example</name>
