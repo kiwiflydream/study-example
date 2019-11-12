@@ -23,6 +23,7 @@
         <module>study-spock-example</module>
         <module>study-jvm-example</module>
         <module>study-zookeeper-example</module>
+        <module>study-springboot-example</module>
     </modules>
 
     <name>study-example</name>
