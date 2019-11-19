@@ -23,4 +23,14 @@ public class Application {
         SpringApplication.run(Application.class, args);
         System.out.println("容器启动完毕");
     }
+
+//    @Configuration
+//    static class MyEndpointConfiguration {
+//        @Bean
+//        @ConditionalOnMissingBean
+//        @ConditionalOnEnabledEndpoint
+//        public MyEndPoint myEndPoint() {
+//            return new MyEndPoint();
+//        }
+//    }
 }

@@ -26,20 +26,6 @@ import java.util.Arrays;
 public class TestBeanLoad {
 
     @Bean
-    @Order(1)
-    public OneOrder oneOrder() {
-        System.out.println("oneOrder 加载");
-        return new OneOrder();
-    }
-
-    @Bean
-    @Order(2)
-    public TwoOrder twoOrder() {
-        System.out.println("twoOrder 加载");
-        return new TwoOrder();
-    }
-
-    @Bean
     @Order
     public DefaultOrder defaultOrder() {
         System.out.println("defaultOrder 加载");
@@ -51,6 +37,21 @@ public class TestBeanLoad {
         System.out.println("noOrder 加载");
         return new NoOrder();
     }
+
+    @Bean
+    @Order(2)
+    public TwoOrder twoOrder() {
+        System.out.println("twoOrder 加载");
+        return new TwoOrder();
+    }
+
+    @Bean
+    @Order(1)
+    public OneOrder oneOrder() {
+        System.out.println("oneOrder 加载");
+        return new OneOrder();
+    }
+
 
     @Bean
     @Order(3)
@@ -79,21 +80,39 @@ public class TestBeanLoad {
 }
 
 class OneOrder {
+    public OneOrder() {
+        System.out.println(this.getClass().getSimpleName() + "初始化");
+    }
 }
 
 class TwoOrder {
+    public TwoOrder() {
+        System.out.println(this.getClass().getSimpleName() + "初始化");
+    }
 }
 
 class NoOrder {
+    public NoOrder() {
+        System.out.println(this.getClass().getSimpleName() + "初始化");
+    }
 }
 
 class DefaultOrder {
+    public DefaultOrder() {
+        System.out.println(this.getClass().getSimpleName() + "初始化");
+    }
 }
 
 class DependsOnFrom {
+    public DependsOnFrom() {
+        System.out.println(this.getClass().getSimpleName() + "初始化");
+    }
 }
 
 class DependsOnTarget {
+    public DependsOnTarget() {
+        System.out.println(this.getClass().getSimpleName() + "初始化");
+    }
 }
 
 class MyApplicationRunner implements ApplicationRunner {
