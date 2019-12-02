@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-  ~ /**
-  ~  * blog.coder4j.cn
-  ~  * Copyright (C) 2016-2019 All Rights Reserved.
+  ~ /*
+  ~  * *
+  ~  *  * blog.coder4j.cn
+  ~  *  * Copyright (C) 2016-2019 All Rights Reserved.
+  ~  *
   ~  */
   -->
 
@@ -24,6 +26,7 @@
         <module>study-jvm-example</module>
         <module>study-zookeeper-example</module>
         <module>study-springboot-example</module>
+        <module>study-xmind-example</module>
     </modules>
 
     <name>study-example</name>
