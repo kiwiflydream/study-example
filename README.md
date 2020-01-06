@@ -1,6 +1,7 @@
 ## 文章列表
 | **文章地址** | **demo 地址** |
 | :---: | :---: |
+| [【Jasypt】给你的配置加把锁](https://mp.weixin.qq.com/s?__biz=MzIzODE1NzA1MA==&mid=2650157729&idx=1&sn=ecf7ca2a74214a304052fb7318270419&chksm=f13f3f34c648b622be29b318d5e1bdc43c07f645a2c4558dd63d1f2d11aaa14f4aebde9751b0&scene=0&xtrack=1#rd) | [链接](https://github.com/kiwiflydream/study-example/tree/master/study-jasypt-example) |
 | [【xmind】 使用 Java 生成思维导图](https://mp.weixin.qq.com/s?__biz=MzIzODE1NzA1MA==&mid=2650157722&idx=1&sn=5d14886e7ed954ae34fd6bafeaf827b5&chksm=f13f3f0fc648b61992565a6b601c8aa7d1b29c32f0e159c0eadb126d8f61ebdbfb5a7d1a39a5&scene=0&xtrack=1#rd) | [链接](https://github.com/kiwiflydream/study-example/tree/master/study-xmind-example) |
 | [【spock】单测竟然可以如此丝滑](https://mp.weixin.qq.com/s?__biz=MzIzODE1NzA1MA==&mid=2650157703&idx=1&sn=0e0b18fe866b4b34149ff31c3be9689e&chksm=f13f3f12c648b6048ec493ef586532e6caa62a636cb3ba77ac9b856d560013e79af88b5b59ed&scene=0&xtrack=1#rd) | [链接](https://github.com/kiwiflydream/study-example/tree/master/study-spock-example) |
 | [【并发那些事】可见性问题的万恶之源](https://mp.weixin.qq.com/s?__biz=MzIzODE1NzA1MA==&mid=2650157718&idx=1&sn=bf6122645ea1bc1b192f52c6e7a1f7f6&chksm=f13f3f03c648b615fe4b5cc93ce05a037ba29db68043bbbc1acc8c6acec22af39e7dac4d069d&scene=0&xtrack=1#rd) | [链接](https://github.com/kiwiflydream/study-example/tree/master/study-thread-example) |
