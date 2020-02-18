@@ -30,6 +30,7 @@
         <module>study-xmind-example</module>
         <module>study-jasypt-example</module>
         <module>study-guava-example</module>
+        <module>study-kotlin-example</module>
     </modules>
 
     <name>study-example</name>
