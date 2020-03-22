@@ -31,6 +31,9 @@
         <module>study-jasypt-example</module>
         <module>study-guava-example</module>
         <module>study-kotlin-example</module>
+        <module>study-jdk8-example</module>
+        <module>study-leetcode</module>
+        <module>study-qdox-example</module>
     </modules>
 
     <name>study-example</name>
