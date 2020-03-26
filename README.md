@@ -1,6 +1,8 @@
 ## 文章列表
 | **文章地址** | **demo 地址** |
 | :---: | :---: |
+| [【qdox】Java 代码解析利器 QDox](https://mp.weixin.qq.com/s?__biz=MzIzODE1NzA1MA==&mid=2650157746&idx=1&sn=e7138fb011ae1a219a96ecfc57e816a9&chksm=f13f3f27c648b631e799aae7656ec114c31dc0598a7cd83db96d27824dd9fef85b03f8818aaf&scene=0&xtrack=1#rd) | [链接](https://github.com/kiwiflydream/study-example/tree/master/study-qdox-example) |
+| [【并发那些事】线程有序化神器CompletionService](https://mp.weixin.qq.com/s?__biz=MzIzODE1NzA1MA==&mid=2650157742&idx=1&sn=5cc1ef70b75e96de049f4c3ab7697813&chksm=f13f3f3bc648b62de663261e97f0b05fd980af0f4782c3c0b6c2c4f0372cd101f3396dca20e7&scene=0&xtrack=1#rd) | [链接](https://github.com/kiwiflydream/study-example/tree/master/study-thread-example) |
 | [【Jasypt】给你的配置加把锁](https://mp.weixin.qq.com/s?__biz=MzIzODE1NzA1MA==&mid=2650157729&idx=1&sn=ecf7ca2a74214a304052fb7318270419&chksm=f13f3f34c648b622be29b318d5e1bdc43c07f645a2c4558dd63d1f2d11aaa14f4aebde9751b0&scene=0&xtrack=1#rd) | [链接](https://github.com/kiwiflydream/study-example/tree/master/study-jasypt-example) |
 | [【xmind】 使用 Java 生成思维导图](https://mp.weixin.qq.com/s?__biz=MzIzODE1NzA1MA==&mid=2650157722&idx=1&sn=5d14886e7ed954ae34fd6bafeaf827b5&chksm=f13f3f0fc648b61992565a6b601c8aa7d1b29c32f0e159c0eadb126d8f61ebdbfb5a7d1a39a5&scene=0&xtrack=1#rd) | [链接](https://github.com/kiwiflydream/study-example/tree/master/study-xmind-example) |
 | [【spock】单测竟然可以如此丝滑](https://mp.weixin.qq.com/s?__biz=MzIzODE1NzA1MA==&mid=2650157703&idx=1&sn=0e0b18fe866b4b34149ff31c3be9689e&chksm=f13f3f12c648b6048ec493ef586532e6caa62a636cb3ba77ac9b856d560013e79af88b5b59ed&scene=0&xtrack=1#rd) | [链接](https://github.com/kiwiflydream/study-example/tree/master/study-spock-example) |
