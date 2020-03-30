@@ -34,6 +34,7 @@
         <module>study-jdk8-example</module>
         <module>study-leetcode</module>
         <module>study-qdox-example</module>
+        <module>demo-maven-plugin</module>
     </modules>
 
     <name>study-example</name>
