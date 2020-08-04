@@ -35,6 +35,7 @@
         <module>study-leetcode</module>
         <module>study-qdox-example</module>
         <module>demo-maven-plugin</module>
+        <module>study-random-example</module>
     </modules>
 
     <name>study-example</name>

@@ -2,7 +2,7 @@
  *
  *  * *
  *  *  * blog.coder4j.cn
- *  *  * Copyright (C) 2016-2019 All Rights Reserved.
+ *  *  * Copyright (C) 2016-2020 All Rights Reserved.
  *  *
  *
  */
@@ -28,7 +28,7 @@ public class TestCount {
         System.out.println(testCount.count);
     }
 
-    public void add10k() {
+    synchronized public void add10k() {
         for (int i = 0; i < 10000; i++) {
             count++;
         }

@@ -1,7 +1,9 @@
 /*
- * *
- *  * blog.coder4j.cn
- *  * Copyright (C) 2016-2019 All Rights Reserved.
+ *
+ *  * *
+ *  *  * blog.coder4j.cn
+ *  *  * Copyright (C) 2016-2020 All Rights Reserved.
+ *  *
  *
  */
 package cn.coder4j.study.example.thread;
@@ -13,7 +15,8 @@ package cn.coder4j.study.example.thread;
 public class TestVolatile {
 
     //    private volatile boolean flag = false;
-    private boolean flag = false;
+    private volatile boolean flag = false;
+//    private Integer num = 0;
 
     public static void main(String[] args) {
         TestVolatile testVolatile = new TestVolatile();
@@ -24,6 +27,7 @@ public class TestVolatile {
             while (!testVolatile.isFlag()) {
             }
             System.out.println(name + " end");
+//            System.out.println(" num = " +testVolatile.getNum() + "-" + name + " end");
         }).start();
 
         try {
@@ -35,7 +39,9 @@ public class TestVolatile {
         new Thread(() -> {
             String name = Thread.currentThread().getName();
             testVolatile.setFlag(true);
+//            testVolatile.setNum(1);
             System.out.println(name + " 设置 flag = " + testVolatile.isFlag());
+//            System.out.println(name + " 设置 flag = " + testVolatile.isFlag() + " num = " +testVolatile.getNum());
         }).start();
 
     }
@@ -61,4 +67,22 @@ public class TestVolatile {
     public void setFlag(boolean flag) {
         this.flag = flag;
     }
+
+//    /**
+//     * Getter method for property <tt>num</tt>.
+//     *
+//     * @return property value of num
+//     */
+//    public Integer getNum() {
+//        return num;
+//    }
+//
+//    /**
+//     * Setter method for property <tt>num</tt>.
+//     *
+//     * @param num value to be assigned to property num
+//     */
+//    public void setNum(Integer num) {
+//        this.num = num;
+//    }
 }
