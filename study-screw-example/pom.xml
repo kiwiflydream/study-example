@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ /*
+  ~  * *
+  ~  *  * blog.coder4j.cn
+  ~  *  * Copyright (C) 2016-2020 All Rights Reserved.
+  ~  *
+  ~  */
+  -->
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.coder4j.study.example</groupId>
+    <artifactId>study-screw-example</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>study-screw-example</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.smallbun.screw</groupId>
+            <artifactId>screw-core</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+        <!-- HikariCP -->
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>3.4.5</version>
+        </dependency>
+        <!--mysql driver-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.20</version>
+        </dependency>
+    </dependencies>
+
+</project>

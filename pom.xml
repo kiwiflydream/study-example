@@ -36,6 +36,10 @@
         <module>study-qdox-example</module>
         <module>demo-maven-plugin</module>
         <module>study-random-example</module>
+        <module>study-hutool-example</module>
+        <module>study-designpattern-example</module>
+        <module>study-screw-example</module>
+        <module>study-serialization-example</module>
     </modules>
 
     <name>study-example</name>
