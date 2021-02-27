@@ -45,6 +45,7 @@
         <module>study-pdfbox-example</module>
         <module>study-netty-example</module>
         <module>study-spi-example</module>
+        <module>study-redisson-example</module>
     </modules>
 
     <name>study-example</name>

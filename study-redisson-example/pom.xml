@@ -14,10 +14,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>cn.coder4j.study.example</groupId>
-  <artifactId>study-pdfbox-example</artifactId>
+  <artifactId>study-redisson-example</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>study-pdfbox-example</name>
+  <name>study-redisson-example</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,29 +33,9 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.pdfbox</groupId>
-      <artifactId>pdfbox</artifactId>
-      <version>2.0.15</version>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/fontbox -->
-    <dependency>
-      <groupId>org.apache.pdfbox</groupId>
-      <artifactId>fontbox</artifactId>
-      <version>2.0.15</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/jempbox -->
-    <dependency>
-      <groupId>org.apache.pdfbox</groupId>
-      <artifactId>jempbox</artifactId>
-      <version>1.8.16</version>
-    </dependency>
-
-    <dependency>
-      <groupId>cn.hutool</groupId>
-      <artifactId>hutool-all</artifactId>
-      <version>5.4.0</version>
+      <groupId>org.redisson</groupId>
+      <artifactId>redisson</artifactId>
+      <version>3.15.0</version>
     </dependency>
   </dependencies>
-
 </project>

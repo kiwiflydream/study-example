@@ -4,7 +4,7 @@
   ~ /*
   ~  * *
   ~  *  * blog.coder4j.cn
-  ~  *  * Copyright (C) 2016-2020 All Rights Reserved.
+  ~  *  * Copyright (C) 2016-2021 All Rights Reserved.
   ~  *
   ~  */
   -->
@@ -28,7 +28,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
