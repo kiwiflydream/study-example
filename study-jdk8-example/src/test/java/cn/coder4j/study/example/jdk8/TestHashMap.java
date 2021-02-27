@@ -2,13 +2,15 @@
  *
  *  * *
  *  *  * blog.coder4j.cn
- *  *  * Copyright (C) 2016-2020 All Rights Reserved.
+ *  *  * Copyright (C) 2016-2021 All Rights Reserved.
  *  *
  *
  */
 package cn.coder4j.study.example.jdk8;
 
 import org.junit.Test;
+
+import java.util.HashMap;
 
 /**
  * @author buhao
@@ -29,5 +31,17 @@ public class TestHashMap {
         System.out.println(Integer.toBinaryString(-5));
         System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
 
+    }
+
+    @Test
+    public void testSetCap() {
+        final HashMap<Object, Object> map = new HashMap<>(1);
+        map.put("1", "1");
+        map.put("2", "2");
+        for (int i = 0; i < Integer.MAX_VALUE; i++) {
+            map.put(i, i);
+        }
+
+        System.out.println(map);
     }
 }

@@ -14,10 +14,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.coder4j.study.example</groupId>
-    <artifactId>study-jdk8-example</artifactId>
+    <artifactId>study-netty-example</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>study-jdk8-example</name>
+    <name>study-netty-example</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,22 +33,10 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-            <version>5.4.3</version>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.6.Final</version>
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>cn.coder4j.study.example</groupId>
-                <artifactId>demo-maven-plugin</artifactId>
-                <version>1.0-SNAPSHOT</version>
-                <configuration>
-                    <name>tom</name>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>

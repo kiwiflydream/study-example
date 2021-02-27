@@ -2,7 +2,7 @@
  *
  *  * *
  *  *  * blog.coder4j.cn
- *  *  * Copyright (C) 2016-2020 All Rights Reserved.
+ *  *  * Copyright (C) 2016-2021 All Rights Reserved.
  *  *
  *
  */
@@ -15,7 +15,7 @@ package cn.coder4j.study.example.thread;
 public class TestVolatile {
 
     //    private volatile boolean flag = false;
-    private volatile boolean flag = false;
+    private boolean flag = false;
 //    private Integer num = 0;
 
     public static void main(String[] args) {

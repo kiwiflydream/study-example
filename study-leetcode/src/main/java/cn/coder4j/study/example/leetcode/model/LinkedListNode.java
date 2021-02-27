@@ -2,7 +2,7 @@
  *
  *  * *
  *  *  * blog.coder4j.cn
- *  *  * Copyright (C) 2016-2020 All Rights Reserved.
+ *  *  * Copyright (C) 2016-2021 All Rights Reserved.
  *  *
  *
  */
@@ -17,6 +17,15 @@ package cn.coder4j.study.example.leetcode.model;
  * 链表节点
  */
 public class LinkedListNode {
+
+    public LinkedListNode() {
+    }
+
+    public LinkedListNode(int val, LinkedListNode next) {
+        this.val = val;
+        this.next = next;
+    }
+
     /**
      * 保存数值
      */

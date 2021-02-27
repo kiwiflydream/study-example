@@ -4,7 +4,7 @@
   ~ /*
   ~  * *
   ~  *  * blog.coder4j.cn
-  ~  *  * Copyright (C) 2016-2020 All Rights Reserved.
+  ~  *  * Copyright (C) 2016-2021 All Rights Reserved.
   ~  *
   ~  */
   -->
@@ -40,6 +40,11 @@
         <module>study-designpattern-example</module>
         <module>study-screw-example</module>
         <module>study-serialization-example</module>
+        <module>study-nginxparser-example</module>
+        <module>study-proxy-example</module>
+        <module>study-pdfbox-example</module>
+        <module>study-netty-example</module>
+        <module>study-spi-example</module>
     </modules>
 
     <name>study-example</name>
